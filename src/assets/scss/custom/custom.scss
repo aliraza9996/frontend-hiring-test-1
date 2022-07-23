@@ -1,0 +1,38 @@
+.tooltip{
+  position:relative;
+  display:inline-block;
+}
+ .tooltip .tooltiptext {
+   display:none;
+   cursor:pointer;
+   width:120px;
+   background-color:#151924;
+   color:#fff;
+   text-align:left;
+   border-radius:0;
+   margin-top:12px !important;
+   margin-left:-18px !important;
+   padding:15px 0 15px 20px !important;
+   position:absolute;
+   z-index:2;
+   opacity:0;
+ }
+.tooltip .tooltiptext::after{
+  top:-40%;
+}
+
+.tooltip .tooltiptext::after {
+   content:"";
+   position:absolute;
+   top:-25%;
+   left:50%;
+   margin-left:-10px;
+   border-width:15px;
+   border-style:solid;
+   border-color:transparent transparent #151924 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  display:block;
+  opacity:1;
+}
